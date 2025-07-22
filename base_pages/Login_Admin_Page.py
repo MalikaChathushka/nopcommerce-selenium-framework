@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 
 class Login_Admin_Page:
 
+    # create and store the locators
     text_box_username_id = "Email"
     text_box_password_id = "Password"
     btn_login_xpath = "//button[normalize-space()='Log in']"

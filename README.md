@@ -1,64 +1,46 @@
-# \# nopCommerce Selenium Automation Framework
+# nopCommerce Selenium Automation Framework
 
-# 
+A Python-based Selenium automation framework for testing the nopCommerce admin portal. This project uses the Page Object Model (POM) design pattern for maintainable and scalable test automation.
 
-# This repository contains a Selenium-based Python automation framework designed to test the admin portal of the \[nopCommerce Demo Site](https://admin-demo.nopcommerce.com/login).
+## Features
 
-# 
+- **Page Object Model (POM):** Clean separation of page structure and test logic.
+- **Selenium WebDriver:** Automates browser interactions.
+- **Cross-browser support:** Easily switch between Chrome and undetected Chrome.
+- **Pytest Integration:** Simple and powerful test execution.
+- **Easy to extend:** Add new page objects and test cases as needed.
 
-# \## Features
+## Project Structure
 
-# \- Implements the Page Object Model (POM) design pattern for better maintainability and readability.
+```
+nopcommerce-selenium-framework/
+│
+├── base_pages/
+│   └── Login_Admin_Page.py      # Page object for admin login
+├── test_cases/
+│   └── test_admin_login.py      # Test cases for admin login
+├── requirements.txt             # Project dependencies
+└── README.md
+```
 
-# \- Uses PyTest as the test runner with fixtures for setup and teardown.
+## Getting Started
 
-# \- Automated login test with valid credentials.
+1. **Clone the repository:**
+    ```sh
+    git clone https://github.com/yourusername/nopcommerce-selenium-framework.git
+    cd nopcommerce-selenium-framework
+    ```
 
-# \- Generates HTML test reports using `pytest-html`.
+2. **Install dependencies:**
+    ```sh
+    pip install -r requirements.txt
+    ```
 
-# \- Utilizes `webdriver-manager` for automatic WebDriver management.
+3. **Run tests:**
+    ```sh
+    pytest -v -s
+    ```
 
-# \- Structured for easy extension to add more tests and pages.
+## Requirements
 
-# 
-
-# \## Technologies \& Tools
-
-# \- Python 3.x
-
-# \- Selenium WebDriver
-
-# \- PyTest
-
-# \- WebDriver Manager
-
-# \- pytest-html
-
-# 
-
-# \## Getting Started
-
-# 1\. Clone the repo.
-
-# 2\. Create and activate a Python virtual environment.
-
-# 3\. Install dependencies using `pip install -r requirements.txt`.
-
-# 4\. Run tests using `pytest`.
-
-# 
-
-# \## Intended Use
-
-# This framework is designed as a sample project to demonstrate automation testing best practices, suitable for learning, portfolio use, and interview preparation.
-
-# 
-
-# ---
-
-# 
-
-# Feel free to contribute or raise issues for improvements.
-
-# 
-
+See [requirements.txt](requirements.txt) for the full list.
