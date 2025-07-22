@@ -4,14 +4,15 @@ import undetected_chromedriver as uc
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from base_pages.Login_Admin_Page import Login_Admin_Page
-
+from utilities.read_properties import ReadProperties
 class Test_01_Admin_Login:
 
-    admin_page_url = "https://admin-demo.nopcommerce.com/login"
-    username = "admin@yourstore.com"
-    password = "admin"
-    invalid_username = "adminrandom@yourstore.com"
-
+    # Initialize the Read_Config class to access configuration properties
+    # Read the url, username, password and invalid username from config.ini file
+    admin_page_url = ReadProperties.get_admin_page_url()
+    username = ReadProperties.get_username()
+    password = ReadProperties.get_password()
+    invalid_username = ReadProperties.get_invalid_username()
 
     # Check the once browser open correct web page load or not
     def test_title_verification(self, setup):
