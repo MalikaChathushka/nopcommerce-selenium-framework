@@ -42,17 +42,23 @@ nopcommerce-selenium-framework/
     ```
 
     ```sh
-    pytest -v -s .\test_cases\which_file_you_want_to_execute.py --browser firefox <!--(name of the browser you want to execute) -->
+    pytest -v -s .\test_cases\which_file_you_want_to_execute.py --browser firefox
     ```
+    
 
-    ```sh
     <!-- run multiple tests -->
+    ```sh
     pytest -v -s .\test_cases\which_file_you_want_to_execute.py -n 2
     ```
 
-    ```sh
     <!-- to generate HTML reports -->
+    ```sh
     pytest -s -v --html reports/report.html
+    ```
+
+    <!-- data driven testing -->
+    ```sh
+    pytest -s -v --html reports/report.html .\test_cases\test_admin_login_data_driven.py
     ```
 
 

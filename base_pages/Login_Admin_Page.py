@@ -5,6 +5,7 @@ class Login_Admin_Page:
     text_box_username_id = "Email"  # Locator for the username input field (by ID)
     text_box_password_id = "Password"  # Locator for the password input field (by ID)
     btn_login_xpath = "//button[normalize-space()='Log in']"  # Locator for the login button (by XPath)
+    btn_logout_linktext = "Logout"  # Locator for the logout button (by XPath)
 
     # Creating a constructor - object for our class. driver parameter values pass by test classes
     def __init__(self, driver):
@@ -23,3 +24,7 @@ class Login_Admin_Page:
     # Action method for click the login button
     def click_login(self):
         self.driver.find_element(By.XPATH , self.btn_login_xpath).click()  # Click the login button to submit
+
+    # Action method for click the logout button
+    def click_logout(self):
+        self.driver.find_element(By.LINK_TEXT, self.btn_logout_linktext).click() # Click the logout button to log out of the admin panel
