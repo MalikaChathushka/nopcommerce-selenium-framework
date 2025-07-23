@@ -41,6 +41,10 @@ nopcommerce-selenium-framework/
     pytest -v -s
     ```
 
+    ```sh
+    pytest -v -s .\test_cases\which_file_you_want_to_execute.py --browser firefox(name of the browser you want to execute)
+    ```
+
 ## Requirements
 
 See [requirements.txt](requirements.txt) for the full list.
