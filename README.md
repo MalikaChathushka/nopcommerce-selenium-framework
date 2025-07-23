@@ -42,16 +42,16 @@ nopcommerce-selenium-framework/
     ```
 
     ```sh
-    pytest -v -s .\test_cases\which_file_you_want_to_execute.py --browser firefox(name of the browser you want to execute)
+    pytest -v -s .\test_cases\which_file_you_want_to_execute.py --browser firefox <!--(name of the browser you want to execute) -->
     ```
 
     ```sh
-    run multiple tests
+    <!-- run multiple tests -->
     pytest -v -s .\test_cases\which_file_you_want_to_execute.py -n 2
     ```
 
     ```sh
-    to generate HTML reports
+    <!-- to generate HTML reports -->
     pytest -s -v --html reports/report.html
     ```
 
