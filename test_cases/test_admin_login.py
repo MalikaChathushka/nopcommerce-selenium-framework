@@ -35,12 +35,13 @@ class Test_01_Admin_Login:
         expected_title = "nopCommerce demo store. Login"
 
         if actual_title == expected_title:
+            self.driver.take_screenshot("passed_test_title_verification.png")
             self.logger.info("**********Title_matched**********")
             assert True
             self.driver.close()
         
         else:
-            # self.driver.take_screenshot("test_title_verification.png")
+            self.driver.take_screenshot("failed_test_title_verification.png")
             self.logger.info("**********Title_not_matched**********")
             self.driver.close()
             assert False
@@ -71,11 +72,13 @@ class Test_01_Admin_Login:
         expected_title = "Dashboard / nopCommerce administration"
 
         if actual_title == expected_title:
+            self.driver.take_screenshot("passed_valid_loging_verification.png")
             self.logger.info("**********Valid_login**********")
             assert True
             self.driver.close()
         
         else:
+            self.driver.take_screenshot("failed_valid_loging_verification.png")
             self.logger.info("**********Not_a_valid_login**********")
             self.driver.close()
             assert False
@@ -105,11 +108,13 @@ class Test_01_Admin_Login:
         error_message = self.driver.find_element(By.XPATH, "//li").text
 
         if error_message == "No customer account found":
+            self.driver.take_screenshot("passed_Invalid_login_verification.png")
             self.logger.info("**********Invalid_login_success**********")
             assert True
             self.driver.close()
         
         else:
+            self.driver.take_screenshot("failed_invalid_loging_verification.png")
             self.logger.info("**********Invalid_login_not_success**********")
             self.driver.close()
             assert False
