@@ -29,3 +29,9 @@ reports/
 
 # Others
 *.sqlite3
+
+# Ignore image files
+*.png
+*.jpg
+*.jpeg
+*.gif
