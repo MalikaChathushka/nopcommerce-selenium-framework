@@ -45,6 +45,18 @@ nopcommerce-selenium-framework/
     pytest -v -s .\test_cases\which_file_you_want_to_execute.py --browser firefox(name of the browser you want to execute)
     ```
 
+    ```sh
+    run multiple tests
+    pytest -v -s .\test_cases\which_file_you_want_to_execute.py -n 2
+    ```
+
+    ```sh
+    to generate HTML reports
+    pytest -s -v --html reports/report.html
+    ```
+
+
+
 ## Requirements
 
 See [requirements.txt](requirements.txt) for the full list.
