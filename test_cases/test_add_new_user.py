@@ -16,6 +16,10 @@ class Test_03_Add_New_Customer:
     password = ReadProperties.get_password()  # Get admin password from config
     logger = Log_Maker.log_gen()  # Initialize logger for logging test steps
 
+    @pytest.mark.sanity  # Mark this test as part of sanity suite
+    @pytest.mark.regression  # Mark this test as part of regression suite
+
+    # Test to add a new customer in the admin panel
     def test_add_new_customer(self, setup):
         self.logger.info("******** Test_03_Add_New_Customer ********")  # Log test start
         self.driver = setup  # Get WebDriver instance from fixture

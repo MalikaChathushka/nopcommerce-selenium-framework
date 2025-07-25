@@ -61,6 +61,11 @@ nopcommerce-selenium-framework/
     pytest -s -v --html reports/report.html .\test_cases\test_admin_login_data_driven.py
     ```
 
+    <!-- markers testing -->
+    ```sh
+    pytest -s -v -m "sanity" --html reports/report.html .\test_cases --browser chrome
+    ```
+
 
 
 ## Requirements

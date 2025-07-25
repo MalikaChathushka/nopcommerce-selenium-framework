@@ -14,6 +14,9 @@ class Test_04_Search_Customer:
     password = ReadProperties.get_password()  # Get admin password from config
     logger = Log_Maker.log_gen()  # Initialize logger for logging test steps
 
+    @pytest.mark.sanity  # Mark this test as part of sanity suite
+    @pytest.mark.regression  # Mark this test as part of regression suite
+
     def test_search_customer_by_email(self, setup):
         self.logger.info("******** Test_04_Search_Customer ********")  # Log test start
         self.driver = setup  # Get WebDriver instance from fixture
@@ -52,6 +55,8 @@ class Test_04_Search_Customer:
             self.driver.close()
             assert False, "Email not found in search results"
     
+    @pytest.mark.regression  # Mark this test as part of regression suite
+
     def test_search_customer_by_name(self, setup):
         self.logger.info("******** Test_04_Search_Customer ********")  # Log test start
         self.driver = setup  # Get WebDriver instance from fixture
@@ -90,6 +95,8 @@ class Test_04_Search_Customer:
             self.driver.close()
             assert False, "Name not found in search results"
     
+    @pytest.mark.regression  # Mark this test as part of regression suite
+
     def test_search_customer_by_company(self, setup):
         self.logger.info("******** Test_04_Search_Customer ********")  # Log test start
         self.driver = setup  # Get WebDriver instance from fixture

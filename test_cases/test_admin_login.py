@@ -17,6 +17,8 @@ class Test_01_Admin_Login:
     invalid_username = ReadProperties.get_invalid_username()  # Get invalid username for negative test
     logger = Log_Maker.log_gen()  # Initialize logger for logging test steps
 
+    @pytest.mark.regression  # Mark this test as part of regression suite
+
     # Test to verify the title of the login page
     def test_title_verification(self, setup):
         self.logger.info("**********Test_01_Admin_Login**********")  # Log test start
@@ -43,6 +45,9 @@ class Test_01_Admin_Login:
             self.logger.info("**********Title_not_matched**********")  # Log failure
             self.driver.close()  # Close browser
             assert False  # Assert test failed
+
+    @pytest.mark.sanity  # Mark this test as part of sanity suite
+    @pytest.mark.regression  # Mark this test as part of regression suite
 
     # Test to verify valid admin login
     def test_valid_admin_login(self, setup):
@@ -80,6 +85,8 @@ class Test_01_Admin_Login:
             self.logger.info("**********Not_a_valid_login**********")  # Log failure
             self.driver.close()  # Close browser
             assert False  # Assert test failed
+
+    @pytest.mark.regression  # Mark this test as part of regression suite
 
     # Test to verify invalid admin login
     def test_invalid_admin_login(self, setup):
